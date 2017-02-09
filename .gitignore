@@ -1,6 +1,9 @@
 # Mac stuff:
 .DS_Store
 
+# Python Byte Code:
+*.pyc
+
 # Flask stuff:
 instance/
 .webassets-cache
