@@ -25,16 +25,23 @@ Then, add the proper connection information for your MYSQL database.
 
 
 Assuming you have virtualenv virtualenvwrapper, initiliaze a virtual envirnoment.
-  `$ export WORKON_HOME=~/Envs`
-  `$ source /usr/local/bin/virtualenvwrapper.sh`
-  `$ mkvirtualenv my-venv`
-  `$ workon my-venv`
+
+  ```
+    $ export WORKON_HOME=~/Envs
+    $ source /usr/local/bin/virtualenvwrapper.sh
+    $ mkvirtualenv my-venv
+    $ workon my-venv
+  ```
 
 
 In the project folder, configure the environment variables.
-  `$ export FLASK_CONFIG=development`
-  `$ export FLASK_APP=run.py` Note that Windows user may need to use `set` instead of `export`.
-  `$ flask run`
+Note that Windows user may need to use `set` instead of `export`.
+
+  ```
+    $ export FLASK_CONFIG=development
+    $ export FLASK_APP=run.py
+    $ flask run
+  ```
 
 
 
