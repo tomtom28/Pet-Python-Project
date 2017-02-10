@@ -12,6 +12,7 @@ As of right now, the application is at the end of Part 1 of the code along. But 
 What was not covered in the Tutorial was delpoying the webpage to Heroku (but it does cover deploying to a different service). I have documented a Heroku deployment here. Assuming you have the Heroku CLI set up, then this show document the whole process.
 
 
+
 ## Running Locally
 
 In the project folder, install all the requirements dependencies.
@@ -45,23 +46,39 @@ Note that Windows user may need to use `set` instead of `export`.
   ```
 
 
-In order to perform the Database migrations, you will need to use MySQL to `CREATE DATABASE dreamteam_db;` and then call the migratrion from the command line using `$ flask db migrate`.
+In order to perform the Database migrations, you will need to use MySQL to `CREATE DATABASE dreamteam_db;` and then call the migratrion from the command line using `$ flask db upgrade`.
+
 
 
 ## Deployment to Heroku
 
-This assumes that you have the Heorku CLI set up and have deployed to the service in the past, maybe in a different programming language. More in depth info on basics can be found in the [Heroku Docs](https://devcenter.heroku.com/articles/getting-started-with-python#deploy-the-app) for Python.
+This assumes that you have the Heorku CLI set up and have deployed to the service in the past, maybe in a different programming language. More in depth info on basics can be found in this [Tutorial](http://kennmyers.github.io/tutorial/2016/03/11/getting-flask-on-heroku.html) for Python's Flask Deployment.
 
 
 Once the Heroku app is added, go to your Heroku dashboard, click to add the Heroku Add Ons. In this case, we want the Free JawsDB add on to support the MySQL portion of the app. Then, click on JAWS_DB to navigate to their page, where they will show you your connection information. Add the database connection info to the production case in the `instance/config.py` file.
 
 
-Now, to seed the database, you can use can use a client such as MySQL Workbench. Use the database connection information from JAWS_DB to create a `New Connection` to the JawsDB account. Once connected, 
+You can also use the database connection information from JAWS_DB to create a `New Connection` which the JawsDB account. Since we use the SQLAlchemy ORM, though, we can force our migration using the hacky approach below. First, we get the local envirnoment variable to production, which will cause our database to connect to the JawsDB database instead of the local database. Then we run the migration, knowing we are connected to the JawsDB account. Finally, we set the local evironment variable back to development to prevent messing up the deployed database.
+
+  ```
+    export FLASK_CONFIG=production
+    flask db upgrade
+    export FLASK_CONFIG=development
+
+  ```
+
+
+With the JawsDB, database set up, we can finally deploy the app for real. Using a buildpack finally got the app working for me. Below, we modify the Heroku envirnoment: setting the buildpack and the environment variable.
 
   ```
      $ heroku config:add BUILDPACK_URL=https://github.com/kennethreitz/conda-buildpack.git
      $ heroku config:set FLASK_CONFIG=production
+     $ git push heroku master
   ```
+
+
+And that should do it! If your app **should be** deployed, complete with working Log In and Register features thanks to JawsDB. If you have issues, be sure to `git add .`, `git commit -m "edits"`, and `git push origin master` any changes before trying to deploy again via `git push heroku master`.
+
 
 
 ## Resources
