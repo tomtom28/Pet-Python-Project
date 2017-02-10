@@ -1,0 +1,3 @@
+# Configuration Variables
+SECRET_KEY = 'DATABASE_KEY'
+SQLALCHEMY_DATABASE_URI = 'mysql://<USER_NAME>:<PASSWORD>@localhost/<DATABASE_NAME>'

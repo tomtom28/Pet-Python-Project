@@ -5,8 +5,7 @@
 *.pyc
 
 # Flask stuff:
-instance/
 .webassets-cache
 
 # Secret keys and stuff:
-config.test.py
+instance/config.py

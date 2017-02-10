@@ -1,13 +1,15 @@
-# Pet-Python-Project
+# Python Code Along
 
-After completing the [Codecademy Course](https://www.codecademy.com/learn/python) for Python, I wanted to get some hands on experience using a Python framework so I followed a great tutorial on [scotch.io](https://scotch.io/). This application uses Python 2.7.x.
+After completing the [Codecademy Course](https://www.codecademy.com/learn/python) for Python, I wanted to get some hands on experience using a Python framework so I followed a great tutorial on [scotch.io](https://scotch.io/). This application uses Python 2.7.
 
 
 This is a simple Web App that uses the [Flask](http://flask.pocoo.org/) microframework and connects to a MySQL database and performs simple CRUD actions via [MySQL-Python](https://pypi.python.org/pypi/MySQL-python/1.2.5) and the [Flask-sqlalchemy ORM](http://flask-sqlalchemy.pocoo.org/2.1/). Database migrations use [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/). It also performes user authentication using [Flask-Login](https://flask-login.readthedocs.io/en/latest/) and secures forms with [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/).
 
 
-Notes to self....
-Future idea is to webscrape from [http://abc13.com/tag/snake/](http://abc13.com/tag/snake/).
+As of right now, the application is at the end of Part 1 of the code along.
+
+
+What was not covered in the Tutorial was delpoying the webpage to Heroku (but it does cover deploying to a different service). I have documented a Heroku deployment here. Assuming you have the Heroku CLI set up, then this show document the whole process.
 
 
 ## Running Locally
@@ -38,6 +40,13 @@ Note that Windows user may need to use `set` instead of `export`.
     $ export FLASK_APP=run.py
     $ flask run
   ```
+
+
+## Deployment to Heorku
+
+This assumes that you have the Heorku CLI set up and have deployed to the service in the past, maybe in a different programming language.
+
+
 
 
 
