@@ -72,7 +72,7 @@ You can also use the database connection information from JawsDB to create a `Ne
   ```
 
 
-With the JawsDB, database set up, we can finally deploy the app for real. Using a buildpack finally got the app working for me, so I suggest that you use it as well. Below, are the BSAH commands that I used to successfully deploy to Heroku.
+With the JawsDB, database set up, we can finally deploy the app for real. Using a buildpack finally got the app working for me, so I suggest that you use it as well. Below, are the BASH commands that I used to successfully deploy to Heroku.
 
   ```
      $ heroku config:add BUILDPACK_URL=https://github.com/kennethreitz/conda-buildpack.git
