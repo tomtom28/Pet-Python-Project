@@ -3,6 +3,9 @@
 After completing the [Codecademy Course](https://www.codecademy.com/learn/python) for Python, I wanted to get some hands on experience using a Python framework so I followed a great tutorial on [scotch.io](https://scotch.io/). This application uses Python 2.7.X.
 
 
+The application is deployed to Heorku [here](http://tom-first-flask-project.herokuapp.com/)!
+
+
 This is a simple Web App that uses the [Flask](http://flask.pocoo.org/) microframework and connects to a MySQL database and performs simple CRUD actions via [MySQL-Python](https://pypi.python.org/pypi/MySQL-python/1.2.5) and the [Flask-sqlalchemy ORM](http://flask-sqlalchemy.pocoo.org/2.1/). Database migrations use [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/). It also performs user authentication using [Flask-Login](https://flask-login.readthedocs.io/en/latest/) and secures forms with [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/).
 
 
@@ -10,6 +13,7 @@ As of right now, the application is at the end of Part 1 of the code along. But 
 
 
 What was not covered in the Tutorial was deploying the webpage to Heroku (but it does cover deploying to a different service). I have documented a Heroku deployment here. Assuming you have the Heroku CLI set up, then this should document the whole process.
+
 
 
 
