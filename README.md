@@ -55,6 +55,10 @@ Once the Heroku app is added, go to your Heroku dashboard, click to add the Hero
 
 Now, to seed the database, you can use can use a client such as MySQL Workbench. Use the database connection information from JAWS_DB to create a `New Connection` to the JawsDB account. `flask db migrate`
 
+  ```
+    heroku config:set FLASK_CONFIG=heroku
+  ```
+
 
 ## Resources
 
