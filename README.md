@@ -45,6 +45,9 @@ Note that Windows user may need to use `set` instead of `export`.
   ```
 
 
+In order to perform the Database migrations, you will need to use MySQL to `CREATE DATABASE dreamteam_db;` and then call the migratrion from the command line using `$ flask db migrate`.
+
+
 ## Deployment to Heroku
 
 This assumes that you have the Heorku CLI set up and have deployed to the service in the past, maybe in a different programming language. More in depth info on basics can be found in the [Heroku Docs](https://devcenter.heroku.com/articles/getting-started-with-python#deploy-the-app) for Python.
@@ -53,10 +56,11 @@ This assumes that you have the Heorku CLI set up and have deployed to the servic
 Once the Heroku app is added, go to your Heroku dashboard, click to add the Heroku Add Ons. In this case, we want the Free JawsDB add on to support the MySQL portion of the app. Then, click on JAWS_DB to navigate to their page, where they will show you your connection information. Add the database connection info to the production case in the `instance/config.py` file.
 
 
-Now, to seed the database, you can use can use a client such as MySQL Workbench. Use the database connection information from JAWS_DB to create a `New Connection` to the JawsDB account. `flask db migrate`
+Now, to seed the database, you can use can use a client such as MySQL Workbench. Use the database connection information from JAWS_DB to create a `New Connection` to the JawsDB account. Once connected, 
 
   ```
-    heroku config:set FLASK_CONFIG=heroku
+     $ heroku config:add BUILDPACK_URL=https://github.com/kennethreitz/conda-buildpack.git
+     $ heroku config:set FLASK_CONFIG=production
   ```
 
 

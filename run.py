@@ -10,11 +10,6 @@ if __name__ == '__main__':
 
     # Production vs. Local Host  
     PORT = int(os.environ.get("PORT", 5000))
-
-    # Production vs. Local Host
-    if (FLASK_CONFIG == 'production'):
-        HOST = 'tom-first-flask-project.herokuapp.com'
-    else:
-        HOST = '0.0.0.0'
+    HOST = '0.0.0.0'
 
     app.run(host=HOST, port=PORT)
