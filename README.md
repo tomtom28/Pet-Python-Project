@@ -98,8 +98,8 @@ And that should do it! Your app **should be** deployed, complete with working Lo
 #### Home Page
 ![HomePage](/screenshots/HomePage.png)
 
-#### Login
+#### Login Page
 ![Log In Page](/screenshots/LoginPage.png)
 
-#### HomePage
+#### Registration Page
 ![Register Page](/screenshots/RegisterPage.png)
