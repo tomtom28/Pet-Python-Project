@@ -6,7 +6,7 @@ After completing the [Codecademy Course](https://www.codecademy.com/learn/python
 This is a simple Web App that uses the [Flask](http://flask.pocoo.org/) microframework and connects to a MySQL database and performs simple CRUD actions via [MySQL-Python](https://pypi.python.org/pypi/MySQL-python/1.2.5) and the [Flask-sqlalchemy ORM](http://flask-sqlalchemy.pocoo.org/2.1/). Database migrations use [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/). It also performes user authentication using [Flask-Login](https://flask-login.readthedocs.io/en/latest/) and secures forms with [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/).
 
 
-As of right now, the application is at the end of Part 1 of the code along.
+As of right now, the application is at the end of Part 1 of the code along. But it was deployed in that state, so it features sign up and login pages.
 
 
 What was not covered in the Tutorial was delpoying the webpage to Heroku (but it does cover deploying to a different service). I have documented a Heroku deployment here. Assuming you have the Heroku CLI set up, then this show document the whole process.
