@@ -15,7 +15,10 @@ What was not covered in the Tutorial was delpoying the webpage to Heroku (but it
 ## Running Locally
 
 In the project folder, install all the requirements dependencies.
-  `$ pip install -r requirements.txt`
+
+  ```
+    $ pip install -r requirements.txt
+  ```
 
 
 Inside the `instance` folder, rename the `config.test.py` file to `config.py`. 
@@ -42,7 +45,7 @@ Note that Windows user may need to use `set` instead of `export`.
   ```
 
 
-## Deployment to Heorku
+## Deployment to Heroku
 
 This assumes that you have the Heorku CLI set up and have deployed to the service in the past, maybe in a different programming language.
 
